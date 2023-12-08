@@ -1,0 +1,5 @@
+name: 'Ajax API'
+type: module
+description: 'Examples of using Ajax in Drupal'
+package: Custom
+core_version_requirement: ^10
