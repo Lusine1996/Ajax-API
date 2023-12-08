@@ -51,7 +51,7 @@ class AjaxSubmitForm extends FormBase
       '#type' => 'button',
       '#value' => $this->t('Save'),
       '#ajax' => [
-        'callback' => '::submitData',
+        'callback' => '::ajaxActionsCallback',
       ],
     ];
     return $form;
@@ -64,7 +64,7 @@ class AjaxSubmitForm extends FormBase
   }
 
 
-  public function submitForm(array &$form, FormStateInterface $form_state)
+  public function ajaxActionsCallback(array &$form, FormStateInterface $form_state)
   {
     \Drupal::messenger()->addMessage($this->t('Form submitted. Name: @name, Email: @email, Message: @message', [
       '@name' => $form_state->getValue('name'),
