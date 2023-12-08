@@ -5,3 +5,11 @@ ajax_api.ajax_submit:
     _form: 'Drupal\ajax_api\Form\AjaxSubmitForm'
   requirements:
     _permission: 'access content'
+
+ajax_api.ajax_form:
+  path: '/ajax-form'
+  defaults:
+    _title: 'Ajax Form'
+    _form: 'Drupal\ajax_api\Form\AjaxForm'
+  requirements:
+    _permission: 'access content'
