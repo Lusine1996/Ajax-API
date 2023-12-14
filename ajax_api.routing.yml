@@ -13,3 +13,22 @@ ajax_api.ajax_form:
     _form: 'Drupal\ajax_api\Form\AjaxForm'
   requirements:
     _permission: 'access content'
+
+ajax_api.user_autocomplete:
+  path: '/autocomplete'
+  defaults:
+    _title: 'Autocomplete Controller'
+    _controller: '\Drupal\ajax_api\Controller\AutocompleteController::handleAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'TRUE'
+
+ajax_api.autocomplete_form:
+  path: '/admin/ajax_api/autocomplete/articles/form'
+  defaults:
+    _title: 'Autocomplete Example'
+    _form: 'Drupal\ajax_api\Form\AutocompleteForm'
+  requirements:
+    _permission: 'TRUE'
+
+
